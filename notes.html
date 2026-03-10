@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>My Notes</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h3>Swarupa Notes</h3>
+
+<div class="nav-links">
+
+<a href="/">Home</a>
+<a href="/notes">Notes</a>
+
+</div>
+
+</div>
+
+<div class="notes-container">
+
+<h1>My Study Notes</h1>
+
+<div class="note-form">
+
+<form method="POST">
+
+<input type="text" name="title" placeholder="Note Title" required>
+
+<textarea name="content" placeholder="Write your note..." required></textarea>
+
+<button class="main-btn" type="submit">Save Note</button>
+
+</form>
+
+</div>
+
+<hr>
+
+<h2>Saved Notes</h2>
+
+<div class="notes-grid">
+
+{% for note in notes %}
+
+<div class="note-card">
+
+<h3>{{ note.title }}</h3>
+
+<p>{{ note.content }}</p>
+
+<div class="card-buttons">
+
+<a href="/edit/{{ loop.index0 }}">
+<button class="edit-btn">Edit</button>
+</a>
+
+<a href="/delete/{{ loop.index0 }}">
+<button class="delete-btn">Delete</button>
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</body>
+</html>

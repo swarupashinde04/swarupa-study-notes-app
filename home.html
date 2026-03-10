@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Swarupa Study Notes</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h3>Swarupa Notes</h3>
+
+<div class="nav-links">
+
+<a href="/">Home</a>
+<a href="/notes">Notes</a>
+
+</div>
+
+</div>
+
+<div class="hero">
+
+<div class="hero-text">
+
+<h1>Welcome to Swarupa's Study Notes App</h1>
+
+<p>
+A small web application built while learning Python and Flask.
+It helps organize study notes in a simple and practical way.
+</p>
+
+<p>
+Every big project starts with a small idea — this is one of mine.
+</p>
+
+<br>
+
+<a href="/notes">
+<button class="main-btn">Start Writing Notes</button>
+</a>
+
+<p style="margin-top:20px;color:#777;">
+Created by Swarupa Shinde
+</p>
+
+</div>
+
+<div>
+
+<img src="{{ url_for('static', filename='study.jpg') }}" width="350">
+
+</div>
+
+</div>
+
+</body>
+</html>
