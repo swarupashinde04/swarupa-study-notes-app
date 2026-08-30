@@ -5,7 +5,7 @@ notes = []
 @app.route("/")
 def home():
     return render_template("home.html")
-
+    
 
 @app.route("/notes", methods=["GET","POST"])
 def notes_page():
